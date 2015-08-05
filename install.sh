@@ -8,6 +8,14 @@ source ~/perl5/perlbrew/etc/bashrc
 perlbrew install perl-5.14.4
 perlbrew switch perl-5.14.4
 perlbrew install-cpanm
-cpanm XML/Simple.pm
 
-sudo dpkg -i bcl2fastq_1.8.4-2_amd64_cut.deb
+# install libraries
+sudo apt-get -y install wget
+wget http://pkgs.fedoraproject.org/repo/pkgs/expat/expat-2.1.0.tar.gz/dd7dab7a5fea97d2a6a43f511449b7cd/expat-2.1.0.tar.gz
+tar xzf expat-2.1.0.tar.gz
+cd expat-2.1.0
+./configure
+make
+sudo make install
+
+cpanm XML/Simple.pm

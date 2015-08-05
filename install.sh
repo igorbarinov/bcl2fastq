@@ -4,10 +4,11 @@ sudo apt-get update
 sudo apt-get install -y build-essential
 curl -kL http://install.perlbrew.pl | bash
 echo >> ~/.bash_profile "source ~/perl5/perlbrew/etc/bashrc"
-source ~/perl5/perlbrew/etc/bashrc
 perlbrew install perl-5.14.4
 perlbrew switch perl-5.14.4
 perlbrew install-cpanm
+sudo dpkg -i bcl2fastq_1.8.4-2_amd64.deb
+source ~/perl5/perlbrew/etc/bashrc
 
 # install libraries
 sudo apt-get -y install wget

@@ -21,4 +21,6 @@ make
 sudo make install
 
 cpanm XML/Simple.pm
+
 date
+source ~/perl5/perlbrew/etc/bashrc
